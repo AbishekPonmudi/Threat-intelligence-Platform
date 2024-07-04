@@ -4,8 +4,8 @@ import sys
 from mitmproxy import http
 
 # List of domains and URL paths related to ads on YouTube
-blocked_domains = ["sydney.bing.com", "gemini.google.com"]
-blocked_paths = ["/ads","/feed/trending?bp=6gQJRkVleHBsb3Jl", "/@4GSilverAcademy"]
+blocked_domains = ["sydney.bing.com","copilot.microsoft.com","ads.google.com"]
+blocked_paths = ["/ads","/hacking", "/@4GSilverAcademy","/@Letmecooksomething","/UC-9-kyTW8ZkZNDHQJ6FgpwQ"]
 
 proxy_enabled = False  # Track if proxy is enabled
 
@@ -118,7 +118,7 @@ def response(flow: http.HTTPFlow) -> None:
         # Block responses from specified domains or URL paths
         if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths):
             # Clear the response content to effectively block it
-            flow.response.content = b"BLOCKED BY ADMIN"
+            flow.response.content = b"Access Blocked"
 
 def main():
     # Register signal handler to disable proxy on exit
