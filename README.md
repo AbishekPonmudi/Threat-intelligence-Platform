@@ -9,7 +9,8 @@ The Thread Intelligence Platform for Windows is a high-performance, Endpoint det
 ``High Performance:`` Leverages multithreading to handle numerous network connections simultaneously, ensuring responsive and efficient processing.
 
 ``Real-Time Monitoring:`` Captures and analyzes network traffic in real-time, providing immediate insights and alerts.
-Scalable Architecture: Designed to scale with increasing network load, making it suitable for both small and large network environments.
+
+``Scalable Architecture:`` Designed to scale with increasing network load, making it suitable for both small and large network environments.
 
 ``Enhanced Security:`` Incorporates robust threat detection mechanisms to identify and mitigate potential cybersecurity threats.
 
