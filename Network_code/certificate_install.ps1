@@ -4,7 +4,7 @@
 #  Author = Havox """
 
 # Certificate location
-$certlocation = "C:\Users\Abishek\Downloads\TIP_module-master\Network_code\certificate.pfx"
+$certlocation = "certificate.pfx"
 
 # get the certificate from the location to install on store
 $certcommand = Get-PfxCertificate -FilePath $certlocation
