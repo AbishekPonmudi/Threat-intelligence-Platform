@@ -67,7 +67,7 @@ function Install-PythonLibraries {
     python -m pip install --upgrade pip
 
     Write-Host "Installing Python libraries..."
-    python -m pip install pefile yara-python pywin32 tqdm psutil pandas yara-python scapy
+    python -m pip install pefile yara-python pywin32 tqdm psutil pandas yara-python scapy mitmproxy
 }
 
 # Function to install Npcap from URL
@@ -104,4 +104,5 @@ Install-PythonLibraries
 Install-Npcap-FromUrl
 Install-Mitmproxy-FromUrl
 
-Write-Host "Setup complete."
+Write-Host "Setup complete !! Plese Cold Start Your PC."
+exit
