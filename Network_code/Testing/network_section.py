@@ -4,30 +4,29 @@ import pandas as pd
 import time
 from collections import defaultdict
 
+
+# add = lambda a,b : a+ b   
+# print(add(10,20))
+
 # Initialize lists and dictionaries to store packet details and connection statuses
 packet_info_list = []
 connection_status = defaultdict(lambda: 'UNKNOWN')
 ip_request_count = defaultdict(int)
 session_data = defaultdict(list)
 
-# Function to capture packets and perform deep packet inspection
 def packet_callback(packet):
     packet_info = {}
     
-    # Extract IP layer information
     if packet.haslayer(scapy.IP):
         packet_info['src_ip'] = packet[scapy.IP].src
         packet_info['dst_ip'] = packet[scapy.IP].dst
-
-        # Count requests per IP
         ip_request_count[packet[scapy.IP].src] += 1
-    
-    # Extract TCP layer information
     if packet.haslayer(scapy.TCP):
         packet_info['src_port'] = packet[scapy.TCP].sport
         packet_info['dst_port'] = packet[scapy.TCP].dport
-    
-    # Extract HTTP request information
+        
+    # capture the request  
+
     if packet.haslayer(HTTPRequest):
         packet_info['method'] = packet[HTTPRequest].Method.decode()
         packet_info['host'] = packet[HTTPRequest].Host.decode()
@@ -35,22 +34,19 @@ def packet_callback(packet):
         packet_info['http_version'] = packet[HTTPRequest].Http_Version.decode()
         packet_info['is_request'] = True
 
-        # Store the request in session tracking
+
         session_key = (packet[scapy.IP].src, packet[scapy.TCP].sport, packet[HTTPRequest].Host.decode())
         session_data[session_key].append(packet_info)
-    
-    # Extract HTTP response information
+
     if packet.haslayer(HTTPResponse):
         packet_info['status_code'] = packet[HTTPResponse].Status_Code.decode()
         packet_info['reason_phrase'] = packet[HTTPResponse].Reason_Phrase.decode()
         packet_info['is_request'] = False
 
-        # Match the response to a stored request
         session_key = (packet[scapy.IP].dst, packet[scapy.TCP].dport, packet[scapy.HTTPResponse].Host.decode())
         if session_key in session_data:
             session_data[session_key].append(packet_info)
 
-    # Extract DNS information
     if packet.haslayer(scapy.DNS):
         packet_info['dns_qry_name'] = packet[scapy.DNSQR].qname.decode()
         packet_info['dns_response'] = packet[scapy.DNSRR].rdata if packet.haslayer(scapy.DNSRR) else 'N/A'

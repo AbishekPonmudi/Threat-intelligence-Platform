@@ -1,8 +1,7 @@
 # Ensure that PowerShell script execution is enabled
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-
-$certlocation = "components\certificate.p12" 
+$certlocation = "certificate.p12" 
 
 # get the certificate from the location to install on store
 $certcommand = Get-PfxCertificate -FilePath $certlocation
@@ -97,7 +96,7 @@ function Install-Mitmproxy-FromUrl {
     Write-Host "mitmproxy installation complete."
 }
 
-# Run the functions
+Run the functions
 Install-Scoop
 Install-YARA-WithScoop
 Install-PythonLibraries
@@ -105,4 +104,6 @@ Install-Npcap-FromUrl
 Install-Mitmproxy-FromUrl
 
 Write-Host "Setup complete !! Plese Cold Start Your PC."
-exit
+Start-sleep -Seconds 2
+
+Exit
