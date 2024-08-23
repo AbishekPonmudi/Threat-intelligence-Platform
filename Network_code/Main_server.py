@@ -4,8 +4,13 @@ import sys
 from datetime import datetime
 from mitmproxy import ctx, http
 
+<<<<<<< HEAD
 blocked_domains = ["fast.com","google.com","youtube.com","sydney.bing.com","copilot.microsoft.com","ads.google.com","googleads.g.doubleclick.net","remotedesktop.google.com"]
 blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet","/watch?v=jxCRlebiebw"]
+=======
+blocked_domains = ["gemini.google.com","sydney.bing.com","copilot.microsoft.com","ads.google.com","googleads.g.doubleclick.net"]
+blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet"]
+>>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
 
 proxy_enabled = False  
 
@@ -135,7 +140,11 @@ def request(flow: http.HTTPFlow) -> None:
         if any(domain in flow.request.host for domain in blocked_domains) or any(flow.request.path.startswith(path) for path in blocked_paths):
             with open("web_warning.html", "r", encoding="") as f:
                 html_content = f.read()
+<<<<<<< HEAD
             flow.response = http.Response.make(
+=======
+            flow.response = http.HTTPResponse.make(
+>>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
                 403,  
                 html_content,  
                 {"Content-Type": "text/html"} 
@@ -148,8 +157,13 @@ def response(flow: http.HTTPFlow) -> None:
     if flow.response:
         logger.log_response(flow)
 
+<<<<<<< HEAD
         if any(domain in flow.request.host for domain in blocked_domains) or any(flow.request.path.startswith(path) for path in blocked_paths):
             with open("web_warning.html", "r", encoding="utf-8") as f:
+=======
+        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths):
+            with open("web_warning.html", "rb") as f:
+>>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
                 html_content = f.read()
             flow.response.content = html_content
 
