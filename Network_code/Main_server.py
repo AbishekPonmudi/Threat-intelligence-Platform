@@ -1,16 +1,15 @@
 import subprocess
 import signal
 import sys
+import re
 from datetime import datetime
 from mitmproxy import ctx, http
 
-<<<<<<< HEAD
-blocked_domains = ["fast.com","google.com","youtube.com","sydney.bing.com","copilot.microsoft.com","ads.google.com","googleads.g.doubleclick.net","remotedesktop.google.com"]
-blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet","/watch?v=jxCRlebiebw"]
-=======
+blocked_port = [8090]
+blocked_ip = []
+blocked_host = ["www.youtube.com"]
 blocked_domains = ["gemini.google.com","sydney.bing.com","copilot.microsoft.com","ads.google.com","googleads.g.doubleclick.net"]
-blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet"]
->>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
+blocked_paths = ["/ads","/watch?v=oPsxy9JF8FM","/@havox_cybernet","search?q=hacker","/search?pglt=171&q=how+to+hack","/search?q=how+to+hack","/youtubei","/watch?v"]    
 
 proxy_enabled = False  
 
@@ -63,7 +62,7 @@ class Logger:
 
 logger = Logger()
 
-def enable_proxy():
+def enable_proxy()-> None:
     global proxy_enabled
     try:
         
@@ -78,7 +77,7 @@ def enable_proxy():
         print(f"Failed to enable proxy: {e}")
         sys.exit(1)
 
-def registry_value_exists(key, value):
+def registry_value_exists(key, value) -> map:
     command_check = f'reg query "{key}" /v {value}'
     result = subprocess.run(command_check, shell=True, capture_output=True)
     return result.returncode == 0
@@ -117,7 +116,6 @@ def start_mitmproxy():
         mitmdump_process = subprocess.Popen(command)
 
         try:
-
             mitmdump_process.wait()
         except KeyboardInterrupt:
             print("\nCtrl+C detected. Stopping and disabling the server...")
@@ -132,38 +130,41 @@ def start_mitmproxy():
         sys.exit(1)
 
 def request(flow: http.HTTPFlow) -> None:
-    global blocked_domains, blocked_paths
+    global blocked_domains, blocked_paths , blocked_ip , blocked_port
     
     if flow.request.pretty_url.startswith("http://") or flow.request.pretty_url.startswith("https://"):
         logger.log_request(flow)
 
-        if any(domain in flow.request.host for domain in blocked_domains) or any(flow.request.path.startswith(path) for path in blocked_paths):
-            with open("web_warning.html", "r", encoding="") as f:
+        if flow.request.port in blocked_port:
+            with open("web_warning.html","rb") as f:
                 html_content = f.read()
-<<<<<<< HEAD
             flow.response = http.Response.make(
-=======
-            flow.response = http.HTTPResponse.make(
->>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
+                403,
+                html_content,
+                {"content-type" : "html/text"}
+            )
+            
+        print(f"Blocked a request on port {flow.request.port}")
+        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths) \
+            or any(hosts in flow.request.host for hosts in blocked_host) or any (blockip in flow.request.host for blockip in blocked_ip):
+            with open("web_warning.html", "rb") as f:
+                html_content = f.read()
+            flow.response = http.Response.make(
                 403,  
                 html_content,  
                 {"Content-Type": "text/html"} 
             )
-            print(f"Blocked a request to {flow.request.pretty_url}")
+            print(f"Blocked a request to {flow.request.pretty_url} on port {flow.request.port}")
 
 def response(flow: http.HTTPFlow) -> None:
-    global blocked_domains, blocked_paths
+    global blocked_domains, blocked_paths ,blocked_ip
     
     if flow.response:
         logger.log_response(flow)
 
-<<<<<<< HEAD
-        if any(domain in flow.request.host for domain in blocked_domains) or any(flow.request.path.startswith(path) for path in blocked_paths):
-            with open("web_warning.html", "r", encoding="utf-8") as f:
-=======
-        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path in blocked_paths):
+        if any(domain in flow.request.host for domain in blocked_domains) or any(path in flow.request.path for path  in blocked_paths) or \
+              any(hosts in flow.request.host for hosts in blocked_host) or any(blockip in flow.request.host for blockip in blocked_ip):
             with open("web_warning.html", "rb") as f:
->>>>>>> 7e93a9e45bfba3c6b47bbcff31c47f21629ace6f
                 html_content = f.read()
             flow.response.content = html_content
 
