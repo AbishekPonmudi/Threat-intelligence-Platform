@@ -19,8 +19,6 @@ This is the Endpoint detection and response with Advance threat intelligence pla
 
 ``Exploit suggestor:`` Which will suggest to patch the vulnerability and misconfiguration within the system being exploited. 
 
-## NOTE : THE  BELOW SECTION CONTAIN'S THE FULL DETAILZED CONCEPT ABOUT THE PROJECT IF YOU DONT HAVE TIME PLEASE USE THIS DOCUMENT AND RESEACH DOCUMENT LINK TO GET DEEP INTO THIS PROJECT 
-
 ### High Performance 
 
 ## Multithreading: 
@@ -30,17 +28,19 @@ This is the Endpoint detection and response with Advance threat intelligence pla
 ``Benefits:`` This scalability makes the platform suitable for organizations of all sizes, from small networks to large enterprise environments. 
 Real-Time Monitoring 
 
-•	Network Traffic Analysis: 
-o	Description: The platform continuously captures and analyzes network traffic in real-time. It inspects data packets for signs of malicious activity, such as unusual traffic patterns, known attack signatures, and other anomalies. 
-o	Benefits: Real-time analysis allows for immediate detection and response to potential threats, reducing the risk of successful cyber attacks. 
-•	Endpoint Monitoring: 
-Description: The platform monitors various activities on endpoints, including running services, application behavior, and patch management status. It collects and analyzes data from endpoints to identify suspicious activities. o 	Benefits: Comprehensive endpoint monitoring helps in identifying and mitigating threats at the source, ensuring robust endpoint security. 
+Network Traffic Analysis: 
+The platform continuously captures and analyzes network traffic in real-time. It inspects data packets for signs of malicious activity, such as unusual traffic patterns, known attack signatures, and other anomalies. 
+Benefits: Real-time analysis allows for immediate detection and response to potential threats, reducing the risk of successful cyber attacks. 
+Endpoint Monitoring: 
+Description: The platform monitors various activities on endpoints, including running services, application behavior, and patch management status. It collects and analyzes data from endpoints to identify suspicious activities. 
+Benefits: Comprehensive endpoint monitoring helps in identifying and mitigating threats at the source, ensuring robust endpoint security. 
 Enhanced Security 
 Enumeration techniques 
-•	Host Enumeration
-    Which include the scanning using nmap with T0 – T* and other enumeration
-•	User Enumeration
-   User enumeration using the Server Message Block (SMB) protocol on Windows     involves identifying valid user accounts on a system by interacting with the SMB service.
+Host Enumeration
+Which include the scanning using nmap with T0 – T* and other enumeration
+User Enumeration
+User enumeration using the Server Message Block (SMB) protocol on Windows     involves identifying valid user accounts on a system by interacting with the SMB service.
+
 TOPIC MENTIONED AT LAST OF THIS DOCUMENT
 •	Group Enumeration
 •	Network Share Enumeration
@@ -49,16 +49,16 @@ TOPIC MENTIONED AT LAST OF THIS DOCUMENT
 •	Service Enumeration
 •	Exploring Enumeration via Packet Crafting
 
-•	Malware Detection: 
-o	MD5 and SHA Hash Analysis: 
-▪	Description: Uses MD5 and SHA hash comparisons to identify known malicious files by checking against a database of known malware hashes. 
-▪	Benefits: This method provides quick and accurate identification of known malware, enabling prompt remediation. 
-o	Heuristic Detection: 
-▪	Description: Detects previously unknown malware by analyzing behavior patterns and characteristics that are typical of malicious software. 
-▪	Benefits: Heuristic detection helps in identifying new and emerging threats that do not yet have known signatures. 
-o	PE Header Analysis: 
-▪	Description: Examines the headers of Portable Executable (PE) files for anomalies that may indicate the presence of malware. 
-▪	Benefits: PE header analysis provides an additional layer of detection by identifying suspicious modifications to executable files. o 	YARA Rule-Based Detection: 
+Malware Detection: 
+MD5 and SHA Hash Analysis: 
+Description: Uses MD5 and SHA hash comparisons to identify known malicious files by checking against a database of known malware hashes. 
+Benefits: This method provides quick and accurate identification of known malware, enabling prompt remediation. 
+Heuristic Detection: 
+Description: Detects previously unknown malware by analyzing behavior patterns and characteristics that are typical of malicious software. 
+Benefits: Heuristic detection helps in identifying new and emerging threats that do not yet have known signatures. 
+PE Header Analysis: 
+Description: Examines the headers of Portable Executable (PE) files for anomalies that may indicate the presence of malware. 
+Benefits: PE header analysis provides an additional layer of detection by identifying suspicious modifications to executable files. o 	YARA Rule-Based Detection: 
 ▪	Description: Utilizes YARA rules to identify and classify malware based on known patterns and signatures. 
 ▪	Benefits: YARA rules enhance detection capabilities by allowing for custom, flexible, and precise identification of malware. 
 •	Custom Blocking: 
