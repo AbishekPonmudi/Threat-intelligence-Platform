@@ -1,4 +1,5 @@
-# Custom Endpoint Detection and Response (EDR) Solution
+# Custom Endpoint Detection and Response (EDR) Solution for windows Environment 
+NOTE : THE DOCUMENTATION ARE MENTIONED BELOW , IF DOWNLOAD OR TESTING PLEASE ! VISIT HERE [installation process](#installation)
 
 ## Table of Contents
 1. [Overview](#overview)
