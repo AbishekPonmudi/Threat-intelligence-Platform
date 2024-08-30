@@ -150,6 +150,20 @@ The solution is implemented using a combination of programming languages, tools,
 - **SQL:** Employed for managing and querying the database that stores collected data, analysis results, and threat intelligence.
 - **REST APIs:** Enables secure communication between the client and server components, supporting data transmission, analysis requests, and alert generation.
 
+## installation
+You can install server component on windows manually!! (FOR LINUX SERVER WILL BE RELEASED AS SOON!!)
+
+```git clone https://github.com/AbishekPonmudi/Threat-intelligence-Platform.git```
+```cd Threat-intelligence-Platform```
+```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass```
+```./install.ps1```
+
+if you unable to import the certificate please install maunally 
+
+
+PLEASE MAKE SURE THAT YOU EXECUTE THIS STEP (because of testing DG will done soon)
+```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass```
+
 ## GitHub Repository
 The source code for this project is available on GitHub. Visit the repository to explore the codebase, contribute to the project, or report issues:
 
