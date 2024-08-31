@@ -160,12 +160,12 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass
 ./install.ps1
 ```
 
-if you unable to import the certificate please install maunally 
-
+~~~if you unable to import the certificate please install maunally on the cert folder~~~
 
 PLEASE MAKE SURE THAT YOU EXECUTE THIS STEP (because of testing DG will done soon)
 
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass```
+
 
 ## GitHub Repository
 The source code for this project is available on GitHub. Visit the repository to explore the codebase, contribute to the project, or report issues:
