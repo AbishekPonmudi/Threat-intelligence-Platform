@@ -154,10 +154,11 @@ The solution is implemented using a combination of programming languages, tools,
 You can install server component on windows manually!! (FOR LINUX SERVER WILL BE RELEASED AS SOON!!)
 
 ```bash
-git clone [https://github.com/AbishekPonmudi/Threat-intelligence-Platform.git](https://github.com/AbishekPonmudi/Threat-intelligence-Platform.git)
+git clone https://github.com/AbishekPonmudi/Threat-intelligence-Platform.git
 cd Threat-intelligence-Platform
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass
 ./install.ps1
+```
 
 if you unable to import the certificate please install maunally 
 
