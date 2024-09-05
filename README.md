@@ -192,6 +192,10 @@ TO run this code you should need the python 3.12
 systeminfo > systeminfo.txt
 python wes.py systeminfo.txt
 ```
+Ok let have the deep understanding about the above section this is the windows exploit suggestor this is used to detect the vulnerbity that are not yest patched on the windows system and this alll get through the vulnerbility database Named CVE (Common Vulnerabilities and Exposures) [cve.org](https://cve.mitre.org/) this contain the common vulnerbity and more TTP about the recent Vulnerbilities ans by using the windows exploit suggestor we can also this find the Patch information and exposures.
+
+## How it works internally :
+First it generate the system information from the windows using the windows API named systeminfo this will further analysed using the wes module 
 
 ## GitHub Repository
 The source code for this project is available on GitHub. Visit the repository to explore the codebase, contribute to the project, or report issues:
