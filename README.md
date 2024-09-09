@@ -194,6 +194,13 @@ python wes.py systeminfo.txt
 ```
 Ok let have the deep understanding about the above section this is the windows exploit suggestor this is used to detect the vulnerbity that are not yest patched on the windows system and this alll get through the vulnerbility database Named CVE (Common Vulnerabilities and Exposures) [cve.org](https://cve.mitre.org/) this contain the common vulnerbity and more TTP about the recent Vulnerbilities ans by using the windows exploit suggestor we can also this find the Patch information and exposures.
 
+### custom Malware Analysis
+Next there is a Malware analyser built using the Signature based analysis ,YARA , PE Header analysis , Integrated with API (Virustotal,ClamAV,binwalk) this are the Part of the Static based analysis , also have some research work to integrate the Dynamic based malware analysis using the Sandbox and ML based analysis. For learn please refer this [research_work](https://midi-fox-ef1.notion.site/Malware-analysis-using-ML-model-Research-68ec135c6aa64754929e869262325ba9).Let see what we done!
+#### Signature based analysis :
+This is the Traditional methods to analysis the Malware analysis this methods include the IOC of the Malware signature , we developed the Malware analyser with python that convert the sysf ttem files into the hashes and match with the existing IOC and if the signature mathces it mark it as flag and do this (Critical, warning, Remove, Quaritane). and this will struggle with analys the unknown malware so that we implemented the new methods let see below!
+#### YARA Rules based analysis:
+THis is also the another method of anlaysis interrecpted with Malware anslysis , Traffic analysis, signature analysis and more.., Ok here we see Malware analysis,
+
 ## How it works internally :
 First it generate the system information from the windows using the windows API named systeminfo this will further analysed using the wes module 
 
