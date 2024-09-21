@@ -1,3 +1,4 @@
+
 import subprocess
 import signal
 import sys
@@ -91,6 +92,20 @@ def disable_proxy():
             command_disable_proxy = f'reg delete "{proxy_key}" /v ProxyServer /f'
             subprocess.run(command_disable_proxy, shell=True, check=True)
 
+        # if registry_value_exists(proxy_key, "ProxyEnable"):
+        #     command_disable_enable = f'reg delete "{proxy_key}" /v ProxyEnable /f'
+        #     subprocess.run(command_disable_enable, shell=True, check=True)
+
+        proxy_enabled = False
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to disable proxy: {e}")
+        sys.exit(1)
+    try:
+        proxy_key = "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings"
+        # if registry_value_exists(proxy_key, "ProxyServer"):
+        #     command_disable_proxy = f'reg delete "{proxy_key}" /v ProxyServer /f'
+        #     subprocess.run(command_disable_proxy, shell=True, check=True)
+
         if registry_value_exists(proxy_key, "ProxyEnable"):
             command_disable_enable = f'reg delete "{proxy_key}" /v ProxyEnable /f'
             subprocess.run(command_disable_enable, shell=True, check=True)
@@ -122,7 +137,6 @@ def start_mitmproxy():
             disable_proxy()
             sys.exit(0)
         finally:
-         
             disable_proxy()
     except Exception as e:
         print(f"Error starting mitmdump: {e}")
@@ -172,6 +186,12 @@ def main():
     signal.signal(signal.SIGINT, lambda sig, frame: disable_proxy() or sys.exit(0))
     print("Starting Server...")
     start_mitmproxy()
+    disable_proxy()
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except:
+        disable_proxy()
+    finally:
+        disable_proxy()
