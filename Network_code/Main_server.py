@@ -122,7 +122,6 @@ def start_mitmproxy():
             disable_proxy()
             sys.exit(0)
         finally:
-         
             disable_proxy()
     except Exception as e:
         print(f"Error starting mitmdump: {e}")
@@ -172,6 +171,7 @@ def main():
     signal.signal(signal.SIGINT, lambda sig, frame: disable_proxy() or sys.exit(0))
     print("Starting Server...")
     start_mitmproxy()
+    disable_proxy()
 
 if __name__ == "__main__":
     main()
