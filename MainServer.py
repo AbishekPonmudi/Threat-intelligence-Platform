@@ -55,7 +55,6 @@ class bcolors:
 
 dummy = 'auth.json'
 
-
 def print_banner():
     print("\n" * 2)
     print( bcolors.BOLD+ bcolors.OKBLUE +"""
