@@ -1,1 +1,0 @@
-This repo contains a minimal working PoC to create a process using the native API function `NtCreateUserProcess()`. An accompanying post about this code can be read at https://captmeelo.com/redteam/maldev/2022/05/10/ntcreateuserprocess.html
