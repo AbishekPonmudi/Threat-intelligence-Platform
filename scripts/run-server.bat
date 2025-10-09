@@ -1,10 +1,16 @@
 @echo off
-REM adjust the relative path below if your install folder is different
-SET INSTALL_DIR="C:\Program Files\PlanqX\Server"
-cd /d %INSTALL_DIR%
-if exist PlanqxServer.exe (
+REM -------------------------------
+REM PlanqX Server Launch Script
+REM -------------------------------
+
+SET "INSTALL_DIR=C:\Program Files\PlanqX\Server"
+cd /d "%INSTALL_DIR%"
+
+IF EXIST PlanqxServer.exe (
+    echo Starting PlanqX Server...
     start "PlanqX Server" "PlanqxServer.exe"
-) else (
-    echo "PlanqxServer.exe not found in %INSTALL_DIR%"
+    echo Server launched successfully.
+) ELSE (
+    echo ERROR: PlanqxServer.exe not found in "%INSTALL_DIR%"
     pause
 )
