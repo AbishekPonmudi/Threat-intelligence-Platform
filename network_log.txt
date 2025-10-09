@@ -328,3 +328,498 @@ Severity Level: Info
 
 Additional Info Confidential info :) Dont share ! keep safe
 
+======= Response =======
+Timestamp: 2025-10-09 15:53:23
+URL: http://172.16.44.2:2280/favicon.ico
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:54946
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:37
+URL: http://172.16.44.2:2280/submit/status_login.php
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:54946
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:37
+URL: http://172.16.44.2:2280/submit/user_login.php
+Method: POST
+Host: 172.16.44.2
+Source IP: 127.0.0.1:63494
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:38
+URL: http://172.16.44.2:2280/cportal/cp_style.css?ts=3
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:57768
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:38
+URL: http://172.16.44.2:2281/submit/direct_me.php?url=http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:61393
+Destination IP: 172.16.44.2:2281
+Port: 2281
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Request =======
+Timestamp: 2025-10-09 15:55:35
+URL: http://clientservices.googleapis.com/uma/v2
+Method: POST
+Host: clientservices.googleapis.com
+Source IP: 127.0.0.1:52309
+Destination IP: clientservices.googleapis.com:80
+Port: 80
+Protocol: HTTP
+Event ID: REQUEST
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:55:35
+URL: http://clientservices.googleapis.com/uma/v2
+Method: POST
+Host: clientservices.googleapis.com
+Source IP: 127.0.0.1:52309
+Destination IP: clientservices.googleapis.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:04:35
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:56858
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:04:39
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:56858
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:04:52
+URL: http://edge-http.microsoft.com/captiveportal/generate_204
+Method: GET
+Host: edge-http.microsoft.com
+Source IP: 127.0.0.1:50368
+Destination IP: edge-http.microsoft.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:05:30
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:60129
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:06:12
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:50299
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:06:31
+URL: http://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:63806
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:08:53
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:53092
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:08:55
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:53092
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:09:51
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:50609
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:09:54
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:50609
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Request =======
+Timestamp: 2025-10-09 16:10:45
+URL: http://update.googleapis.com/service/update2/json?cup2key=15:qBeXl6wrmWqaFHXSPHJywlXb6Wyl5ti7BJAMhnUFF_8&cup2hreq=9172a89c043dd01c8761942de8a7691120e471ec4a3025fd0e00a4fbdb013069
+Method: POST
+Host: update.googleapis.com
+Source IP: 127.0.0.1:57530
+Destination IP: update.googleapis.com:80
+Port: 80
+Protocol: HTTP
+Event ID: REQUEST
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:10:45
+URL: http://update.googleapis.com/service/update2/json?cup2key=15:qBeXl6wrmWqaFHXSPHJywlXb6Wyl5ti7BJAMhnUFF_8&cup2hreq=9172a89c043dd01c8761942de8a7691120e471ec4a3025fd0e00a4fbdb013069
+Method: POST
+Host: update.googleapis.com
+Source IP: 127.0.0.1:57530
+Destination IP: update.googleapis.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:11:47
+URL: http://edge-http.microsoft.com/captiveportal/generate_204
+Method: GET
+Host: edge-http.microsoft.com
+Source IP: 127.0.0.1:51634
+Destination IP: edge-http.microsoft.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:12:04
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:52679
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:45
+URL: http://crl3.digicert.com/DigiCertTrustedRootG4.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:63796
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:47
+URL: http://crl3.digicert.com/DigiCertGlobalRootG2.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:63796
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:50
+URL: http://c.pki.goog/r/r1.crl
+Method: GET
+Host: c.pki.goog
+Source IP: 127.0.0.1:63796
+Destination IP: c.pki.goog:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:51
+URL: http://c.pki.goog/r/r4.crl
+Method: GET
+Host: c.pki.goog
+Source IP: 127.0.0.1:63796
+Destination IP: c.pki.goog:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:53
+URL: http://x1.c.lencr.org/
+Method: GET
+Host: x1.c.lencr.org
+Source IP: 127.0.0.1:63796
+Destination IP: x1.c.lencr.org:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:55
+URL: http://crl.verisign.com/pca3.crl
+Method: GET
+Host: crl.verisign.com
+Source IP: 127.0.0.1:56782
+Destination IP: crl.verisign.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:44:58
+URL: http://crl3.digicert.com/DigiCertGlobalRootG3.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:56782
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:45:00
+URL: http://crl3.digicert.com/DigiCertHighAssuranceEVRootCA.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:56782
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:45:01
+URL: http://crl3.digicert.com/DigiCertGlobalRootCA.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:56782
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:45:03
+URL: http://crl3.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:56782
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:45:25
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:51263
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 16:45:27
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:51263
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
