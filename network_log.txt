@@ -1,0 +1,330 @@
+======= Response =======
+Timestamp: 2025-10-09 15:37:20
+URL: http://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=141
+Method: GET
+Host: clientservices.googleapis.com
+Source IP: 127.0.0.1:61232
+Destination IP: clientservices.googleapis.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:20
+URL: http://crl3.digicert.com/DigiCertGlobalRootG2.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:51988
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:20
+URL: http://c.pki.goog/r/r1.crl
+Method: GET
+Host: c.pki.goog
+Source IP: 127.0.0.1:51990
+Destination IP: c.pki.goog:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:20
+URL: http://c.pki.goog/r/r4.crl
+Method: GET
+Host: c.pki.goog
+Source IP: 127.0.0.1:51990
+Destination IP: c.pki.goog:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:20
+URL: http://x1.c.lencr.org/
+Method: GET
+Host: x1.c.lencr.org
+Source IP: 127.0.0.1:51990
+Destination IP: x1.c.lencr.org:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:21
+URL: http://crl.verisign.com/pca3.crl
+Method: GET
+Host: crl.verisign.com
+Source IP: 127.0.0.1:51997
+Destination IP: crl.verisign.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:21
+URL: http://crl3.digicert.com/DigiCertGlobalRootG3.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:52000
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:21
+URL: http://crl3.digicert.com/DigiCertHighAssuranceEVRootCA.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:52003
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:21
+URL: http://crl3.digicert.com/DigiCertGlobalRootCA.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:52005
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:38:21
+URL: http://crl3.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl
+Method: GET
+Host: crl3.digicert.com
+Source IP: 127.0.0.1:52007
+Destination IP: crl3.digicert.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:45:03
+URL: http://edge-http.microsoft.com/captiveportal/generate_204
+Method: GET
+Host: edge-http.microsoft.com
+Source IP: 127.0.0.1:57551
+Destination IP: edge-http.microsoft.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:45:09
+URL: http://edge-http.microsoft.com/captiveportal/generate_204
+Method: GET
+Host: edge-http.microsoft.com
+Source IP: 127.0.0.1:57551
+Destination IP: edge-http.microsoft.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:47:09
+URL: http://edge-http.microsoft.com/captiveportal/generate_204
+Method: GET
+Host: edge-http.microsoft.com
+Source IP: 127.0.0.1:57551
+Destination IP: edge-http.microsoft.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:52:19
+URL: http://www.msftconnecttest.com/connecttest.txt
+Method: GET
+Host: www.msftconnecttest.com
+Source IP: 127.0.0.1:60312
+Destination IP: www.msftconnecttest.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:52:56
+URL: http://www.msftncsi.com/connecttest.txt
+Method: GET
+Host: www.msftncsi.com
+Source IP: 127.0.0.1:63075
+Destination IP: www.msftncsi.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:64613
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://172.16.44.2:2280/cportal/ip/user_login.php?url=http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:53032
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: connectivitycheck.gstatic.com
+Source IP: 127.0.0.1:61991
+Destination IP: connectivitycheck.gstatic.com:80
+Port: 80
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://172.16.44.2:2280/cportal/ip/user_login.php?url=http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:52974
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://172.16.44.2:2280/cportal/login.html?h=aa570cd4&url=http://connectivitycheck.gstatic.com/generate_204
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:63494
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://172.16.44.2:2280/cportal/top.gif?v=2
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:63494
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
+======= Response =======
+Timestamp: 2025-10-09 15:53:22
+URL: http://172.16.44.2:2280/cportal/bg.png?v=2
+Method: GET
+Host: 172.16.44.2
+Source IP: 127.0.0.1:54946
+Destination IP: 172.16.44.2:2280
+Port: 2280
+Protocol: HTTP
+Event ID: RESPONSE
+Severity Level: Info
+=======================
+
+Additional Info Confidential info :) Dont share ! keep safe
+
