@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%2B%2B-blue" />
   <img src="https://img.shields.io/badge/OS-Windows-blue" />
-  <img src="https://img.shields.io/badge/Maintained-Yes-brightgreen" />
+  <img src="https://img.shields.io/badge/Maintained-No-brightgreen" />
 </p>
 
 
