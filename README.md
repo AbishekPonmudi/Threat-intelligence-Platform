@@ -206,3 +206,4 @@ The Custom EDR Solution is a powerful tool designed to provide comprehensive pro
 ---
 
 Feel free to contribute and collaborate! If you have any questions about the modules or code, or if you'd like to understand what's going on, please contact me on [X.com](https://x.com/Havox03).
+
