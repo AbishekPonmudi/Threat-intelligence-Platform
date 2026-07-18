@@ -206,3 +206,13 @@ The Custom EDR Solution is a powerful tool designed to provide comprehensive pro
 ---
 
 Feel free to contribute and collaborate! If you have any questions about the modules or code, or if you'd like to understand what's going on, please contact me on [X.com](https://x.com/Havox03).
+## 🖥️ Running the PlanqX Server
+
+After installation, you can start the PlanqX EDR backend server using Python or the provided script.
+
+### Option 1 — Run manually
+1. Open **Command Prompt** (Run as Administrator recommended)
+2. Navigate to the installation directory (e.g., `C:\Program Files\PlanqX`)
+3. Run the following command:
+   ```cmd
+   python "PlanqXCore CLI.py"
