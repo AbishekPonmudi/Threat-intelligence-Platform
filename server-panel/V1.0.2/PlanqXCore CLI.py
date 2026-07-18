@@ -218,13 +218,13 @@ def execute_option(service_name: str, option_index: int) -> None:
             # Add reboot logic here later
             
             # #
-            # 
-            # 
-            # 
-            # 
-            # 
+            #
+            #
+            #
+            #
+            #
             # #
-        # Add more options using elif condition 
+        # Add more options using elif condition
 
     elif service_name == "Malware Scanner":
         if option_index == 0:  # Run Full Scan

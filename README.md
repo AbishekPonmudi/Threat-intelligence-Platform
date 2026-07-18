@@ -206,3 +206,19 @@ The Custom EDR Solution is a powerful tool designed to provide comprehensive pro
 ---
 
 Feel free to contribute and collaborate! If you have any questions about the modules or code, or if you'd like to understand what's going on, please contact me on [X.com](https://x.com/Havox03).
+## installation
+You can install server component on windows manually!! (FOR LINUX SERVER WILL BE RELEASED AS SOON!!)
+## Server Execution (Post Installation)
+
+After successfully running `PlanqxSetup.exe`, the server files are installed in:
+
+
+
+To start the server manually:
+1. Open Command Prompt **as Administrator**
+2. Navigate to the server folder:
+3. Run the server:
+
+
+
+If you still can’t find the executable, verify installation path or reinstall using the installer.
